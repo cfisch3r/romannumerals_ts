@@ -15,7 +15,7 @@ const romanDigits = [
 export default function convert(number: number) :string {
     let romanNumber :string = "";
     for (let digit of romanDigits) {
-        if (number/digit.value >= 1) {
+        while (number/digit.value >= 1) {
             romanNumber += digit.symbol;
             number -= digit.value;
         }

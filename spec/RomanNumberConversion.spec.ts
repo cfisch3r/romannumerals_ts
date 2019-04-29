@@ -9,9 +9,13 @@ describe('Roman Numbers Conversion should...', () => {
         expect(romanNumber).toBe("V");
     });
 
-    it('represent numbers addition Roman Digit Representation.', () => {
+    it('addition.', () => {
         let romanNumber = convert(1666);
         expect(romanNumber).toBe("MDCLXVI");
     });
 
+    it('multiple identical digits.', () => {
+        let romanNumber = convert(3);
+        expect(romanNumber).toBe("III");
+    });
 });
