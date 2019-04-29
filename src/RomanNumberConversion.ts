@@ -1,18 +1,14 @@
-class RN {
+class RomanDigit {
     constructor(public value: number, public symbol: String){
     }
 }
 
-const nrs = [romanDigit(5, "V"),
-            romanDigit(1,"I")];
-
-function romanDigit(value: number, symbol: string) {
-    return new RN(value, symbol);
-}
+const romanDigits = [new RomanDigit(5, "V"),
+                new RomanDigit(1,"I")];
 
 export default function convert(number: number) :String {
-    for (let nr of nrs) {
-        if (number === nr.value)
-            return nr.symbol;
+    for (let digit of romanDigits) {
+        if (number === digit.value)
+            return digit.symbol;
     }
 }

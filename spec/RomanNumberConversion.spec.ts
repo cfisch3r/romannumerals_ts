@@ -1,7 +1,8 @@
 import convert from "../src/RomanNumberConversion";
 
 describe('Roman Numbers Conversion', () => {
-    it('should convert numbers into their single Roman Number presentation.', () => {
+
+    it('should convert numbers into their single Roman Digit Representation.', () => {
         let romanNumber = convert(1);
         expect(romanNumber).toBe("I");
         romanNumber = convert(5);
