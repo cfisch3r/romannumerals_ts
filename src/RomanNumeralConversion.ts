@@ -21,7 +21,7 @@ const romanNumerals = [
 export default function convert(number: number) :string {
     let romanNumber :string = "";
     for (let numeral of romanNumerals) {
-        while (number/numeral.value >= 1) {
+        while (number >= numeral.value) {
             romanNumber += numeral.symbol;
             number -= numeral.value;
         }
