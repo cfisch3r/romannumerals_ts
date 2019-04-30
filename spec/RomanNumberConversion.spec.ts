@@ -1,6 +1,6 @@
-import convert from "../src/RomanNumberConversion";
+import convert from "../src/RomanNumeralConversion";
 
-describe('Roman Numbers Conversion can handle Numbers', () => {
+describe('Roman Numeral Conversion can handle Numbers', () => {
 
     it('with a single Roman Digit.', () => {
         let romanNumber = convert(1);

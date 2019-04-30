@@ -1,8 +1,8 @@
 {
-  "name": "demo2",
+  "name": "@agiledojo/roman-numeral-conversion",
   "version": "1.0.0",
-  "description": "demo 2",
-  "main": "index.js",
+  "description": "Converter from numbers to roman numerals",
+  "main": "dist/src/",
   "scripts": {
     "test": "jest"
   },
