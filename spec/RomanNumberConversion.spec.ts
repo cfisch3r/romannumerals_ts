@@ -2,11 +2,10 @@ import convert from "../src/RomanNumeralConversion";
 
 describe('Roman Numeral Conversion should process Numbers consisting of', () => {
 
-    test('a single Roman Numeral.', () => {
-        let romanNumber = convert(1);
-        expect(romanNumber).toBe("I");
-        romanNumber = convert(5);
-        expect(romanNumber).toBe("V");
+    test.each([[1,"I"],[5,"V"]])('a single Roman Numeral, e.g %i converts to %s',
+        (nr, expectedRomanNumber) => {
+        let romanNumber = convert(<number> nr);
+        expect(romanNumber).toBe(expectedRomanNumber);
     });
 
     test('an additive Combination of Roman Numerals.', () => {
@@ -19,11 +18,11 @@ describe('Roman Numeral Conversion should process Numbers consisting of', () => 
         expect(romanNumber).toBe("III");
     });
 
-    test('a substractive Combination of Roman Numerals.', () => {
-        let romanNumber = convert(999);
-            expect(romanNumber).toBe("CMXCIX");
-        romanNumber = convert(444);
-        expect(romanNumber).toBe("CDXLIV");
+    test.each([[999,"CMXCIX"],[444,"CDXLIV"]])
+        ('a substractive Combination of Roman Numerals, e.g. %i converts to %s',
+            (number, expectedRomanNumber) => {
+        let romanNumber = convert(<number> number);
+        expect(romanNumber).toBe(expectedRomanNumber);
     });
 
     test('a complex Combination of different Roman Numerals.', () => {
