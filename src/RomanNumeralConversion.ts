@@ -20,12 +20,9 @@ const romanNumerals = [
 
 export default function convert(number: number) :string {
     let romanNumber :string = "";
-    for (let numeral of romanNumerals) {
-        while (number >= numeral.value) {
+    for (let numeral of romanNumerals)
+        for (; number >= numeral.value; number -= numeral.value)
             romanNumber += numeral.symbol;
-            number -= numeral.value;
-        }
-    }
 
     return romanNumber;
 }
